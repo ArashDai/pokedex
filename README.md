@@ -1,2 +1,1 @@
-# pokedex
-project using pokemon api
+website portfolio: The Kettle web dev firm

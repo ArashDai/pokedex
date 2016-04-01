@@ -1,0 +1,201 @@
+body {
+  color: #304852;
+  padding:0em;
+  margin:0em;
+  overflow:hidden;
+}
+
+a{
+  color:#EEEEEE;
+}
+
+a:link {
+    color: #EEEEEE;
+}
+
+a:visited {
+    color: #EEEEEE;
+}
+
+a:hover {
+    color: #EEEEEE;
+}
+
+a:active {
+    color: #F87D09;
+}
+
+
+#main{
+  width:100%;
+  padding:0em;
+  height:100vh;
+}
+
+.App{
+  width:100%;
+  padding:0em;
+  margin:0em;
+  height:100vh;
+}
+
+.PageHeader{
+  height:6.5em;
+  background-color:#ff0000;
+}
+
+#MainHeaderNormal{
+  color:#EEEEEE;
+  margin:0em;
+  padding:0em;
+  font-size:48pt;
+}
+#MainHeaderSmall{
+  color:#EEEEEE;
+  margin:0em;
+  padding:0em;
+  font-size:25pt;
+}
+
+.MainPage{
+  width:100%;
+  padding:0em;
+  margin:0em; 
+}
+
+.Header{
+  margin:0em;
+}
+
+.drawerHeader{
+  color:#EEEEEE;
+  margin-top:.3em;
+}
+
+.DrawerNav{
+  padding-top: 4em;
+  color:#EEEEEE;
+  style:none;
+  list-style-type: none;
+  font-size: 18pt;
+}
+
+.navbar-default .navbar-brand{
+  color:#EEEEEE;
+}
+
+.Intro{
+  background-image: url('../assets/poke.png');
+  background-size:contain;
+  display: relative;
+  padding: 0em;
+  margin: 0em;
+  width: 100%;
+  height: 90vh;
+}
+
+#IntroImg{
+  width:100%;
+}
+
+.introHeader{
+  margin-top:40vh;
+  color:#EEEEEE;
+}
+
+
+.Heading{
+  font-size:4em;
+  color: #EEEEEE;
+}
+
+.Subheading{
+  font-size:2em;
+  color: #EEEEEE;
+}
+.Reviews{
+  border-top: .8em solid #ff0000;
+}
+.ReviewText{
+  font-size: 18pt;
+}
+#reviewer{
+  font-size: 12pt;
+}
+.Culture{
+  padding: 0em;
+  margin: 0em;
+  width: 100%;
+  background-color: #383838 ;
+  border-top: .8em solid #ff0000;
+}
+
+#CultureText{
+  font-size:2em;
+  color: #EEEEEE;
+}
+/*#F87D09*/
+.Portfolio{
+  background-color: #F5F5F5;
+  padding-bottom:1em;
+  border-top: .8em solid #ff0000;
+}
+
+.PortfolioImg{
+  padding: .3em;
+}
+.Portfolio .Heading{
+  color: #383838;
+}
+
+.Services{
+  background-color: #383838;
+  color:#EEEEEE;
+  border-top: .5em solid #ff0000;
+}
+
+.Services .Heading{
+  color:#EEEEEE;
+}
+
+.Contact{
+  padding-bottom: 1em;
+  border-top: .3em solid #ff0000;
+}
+
+#formbox{
+  border-left:.2em solid black;
+  border-right: .2em solid black;
+  border-top: .2em solid black;
+  padding: 0px;
+  color:black;
+}
+
+#emailInput{
+  border-left:.2em solid black;
+  border-right: .2em solid black;
+}
+
+textarea{
+  border:.2em solid black;
+  height: 3.5em;
+  resize:none;
+}
+
+#contactsubmit{
+  margin-top: 1em;
+}
+
+.Footer{
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #383838;
+  text-align: center;
+  color:#EEEEEE;
+  border-top: .2em solid #ff0000;
+}
+
+
