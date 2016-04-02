@@ -22,7 +22,7 @@ var Culture = React.createClass({
         </div>
 
         <div className='col-xs-12 col-sm-6  ' id='CultureText'>
-          <p>we have a passion for creating great user experiences, clean designs that leave a lasting impression for your users </p>
+          <p>we have a passion for creating great user experiences, clean designs that leave a lasting impression for your users jsadbnvkjbakdjvbm;j;sdvbm </p>
         </div>
 
      </div> 

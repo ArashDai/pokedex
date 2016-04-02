@@ -1,5 +1,6 @@
 var React = require('react');
-var swal = require('sweetalert-react');
+
+
 
 var ContactUs = React.createClass({
   getInitialState:function(){
