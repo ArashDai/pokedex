@@ -36,16 +36,16 @@ app.post('/inquiryHandler',function (request,response){
   var finalText = textCreator(request);
 
   var customerMail = {
-    from: 'theKettle',
+    from: 'Online Pokedex',
     to: request.body.email,
     subject: ' TheKettle ',
-    text: 'Hello  '+request.body.customer+'\n'+'Thanks for placing your interest, we\'ll contact you soon. Have a great day!' 
+    text: 'Hello  '+request.body.customer+'\n'+'Thanks for your interest, we\'ll contact you soon. Have a great day!' 
   };
 
   var buisnessMail = {
-    from: 'TheKettle Web Developers',
+    from: 'Pokedex Query',
     to: secret.email, 
-    subject: 'KettleInquiry: '+Date.now(),
+    subject: 'Pokedex Query: '+Date.now(),
     text: finalText
   };
 

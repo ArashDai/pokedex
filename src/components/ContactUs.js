@@ -8,7 +8,6 @@ var ContactUs = React.createClass({
   },
 
   saveInfo:function(e){
-    console.log(e)
     var info = {
       customer: e.target.form[0].value,
       email: e.target.form[1].value,
