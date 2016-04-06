@@ -38,7 +38,7 @@ app.post('/inquiryHandler',function (request,response){
   var customerMail = {
     from: 'Online Pokedex',
     to: request.body.email,
-    subject: ' TheKettle ',
+    subject: ' Online Pokedex ',
     text: 'Hello  '+request.body.customer+'\n'+'Thanks for your interest, we\'ll contact you soon. Have a great day!' 
   };
 
