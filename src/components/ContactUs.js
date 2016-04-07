@@ -14,7 +14,6 @@ var ContactUs = React.createClass({
       phone: e.target.form[2].value,
       inquiry: e.target.form[3].value
     };
-    
     this.setState(info);
   },
 
