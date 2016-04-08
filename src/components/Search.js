@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-
+var PokemonStats = require('./PokemonStats');
+var $ = require('jquery');
 
 
 var Search = React.createClass({
@@ -8,12 +9,26 @@ var Search = React.createClass({
   getInitialState:function(){
     return{
       searchValue: null,
-      searchType: 'name'
+      searchType: 'name',
+      data:null
     }
   },
 
-  search:function(userInput){
-    
+  search:function(){
+    if(this.state.searchType==='name'){
+      var query = 'http://pokeapi.co/api/v2/pokemon/'+this.state.searchValue+'/'
+    }
+    if(this.state.searchType==='type'){
+      var query = 'http://pokeapi.co/api/v2/type/'+this.state.searchValue+'/'
+    }
+    if(this.state.searchType==='attack'){
+      var query = 'http://pokeapi.co/api/v2/move/'+this.state.searchValue+'/'
+    }
+
+    $.get(query,function(response){
+      var data = {data:response};
+      this.setState(data);
+    }.bind(this))
 
   },
 
@@ -36,6 +51,8 @@ var Search = React.createClass({
     if(x.target.value === 'attack'){
       this.setState({searchType:'attack'})
     }
+
+
   },
 
   render:function(){
@@ -44,22 +61,25 @@ var Search = React.createClass({
       <div className='container-fluid text-center Portfolio' >
         <a name='portfolioDom'></a>
          <h2 className='text-center col-xs-12'>Search</h2>
-          
-          <form>
-            <input name='query'className='center-block' type='textbox' />
-            <p className='text-center'>Search by name,type,attack </p>
-    
-              <button type="button" onClick={this.storeInput} className="center-block btn btn-warning">Search</button>
-          </form>
 
-
+            <div id='searchbuttons'>
               <button onClick={this.queryType} name='searchChoice' type='button' value='name'> Name </button>
               <button onClick={this.queryType} name='searchChoice' type='button' value='type'> Type </button>
               <button onClick={this.queryType} name='searchChoice' type='button' value='attack'> Attack </button>
+            </div>
 
+            <form >
+              <div className='center-block'>
+                <input onChange={this.storeInput} id='searchbox' name='query' type='textbox' />
+
+                <button id='searchbutton' type="button" onClick={this.search} className="center-block">Search</button>
+              </div>
+            </form>
+
+          
+          <br/>
+        
          
-         <p className='text-center'> results rendered here 5 at a time until you click more then 5 more show</p>
-         <div id='data1'></div>
          
 
       </div>

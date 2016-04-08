@@ -113,21 +113,25 @@ a:active {
   font-size:2em;
   color: #EEEEEE;
 }
+
 .Reviews{
   border-top: .8em solid #ff0000;
 }
+
 .ReviewText{
   font-size: 18pt;
 }
+
 #reviewer{
   font-size: 12pt;
 }
-.Culture{
+
+.PokemonStats{
   padding: 0em;
   margin: 0em;
   width: 100%;
-  background-color: #383838 ;
-  border-top: .8em solid #ff0000;
+  background-color: white;
+ /* border-top: .2em solid #ff0000;*/
 }
 
 #CultureText{
@@ -144,6 +148,7 @@ a:active {
 .PortfolioImg{
   padding: .3em;
 }
+
 .Portfolio .Heading{
   color: #383838;
 }
@@ -198,4 +203,28 @@ textarea{
   border-top: .2em solid #ff0000;
 }
 
+#searchbutton{
+  display:inline;
+  height:2.7em;
+  color:black;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0 !important;
+}
+#searchbox{
+  height:2.7em;
+  border:1px solid black;
+  margin-right:1em ;
+}
 
+#searchbuttons{
+  margin-bottom:1em;
+}
+
+#searchbuttons button{
+  margin:.5em;
+  color:black;
+  background-color: white;
+  border:1px solid red;
+  height:2em;
+}

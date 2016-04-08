@@ -27,11 +27,9 @@ var App = React.createClass({
             <h1 className='drawerHeader'>POKEDEX</h1>
 
             <ul className='col-xs-12 DrawerNav'>
-              <li className='text-center'><a href='#cultureDom'>Culture</a></li>
+              <li className='text-center'><a href='#cultureDom'>Search</a></li>
                 <br/>
-              <li className='text-center'><a href='#portfolioDom'>Portfolio</a></li>
-                <br/>
-              <li className='text-center'><a href='#servicesDom'>Services</a></li>
+              <li className='text-center'><a href='#portfolioDom'>About</a></li>
                 <br/>
               <li className='text-center'><a href='#contactDom'>Contact</a></li>
             </ul>
