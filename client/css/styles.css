@@ -25,7 +25,6 @@ a:active {
     color: #F87D09;
 }
 
-
 #main{
   width:100%;
   padding:0em;
@@ -46,14 +45,10 @@ a:active {
 
 #MainHeaderNormal{
   color:#EEEEEE;
-  margin:0em;
-  padding:0em;
   font-size:48pt;
 }
 #MainHeaderSmall{
   color:#EEEEEE;
-  margin:0em;
-  padding:0em;
   font-size:25pt;
 }
 
@@ -139,10 +134,11 @@ a:active {
   color: #EEEEEE;
 }
 /*#F87D09*/
+
 .Portfolio{
   background-color: #F5F5F5;
   padding-bottom:1em;
-  border-top: .8em solid #ff0000;
+  /*border-top: .8em solid #ff0000;*/
 }
 
 .PortfolioImg{
@@ -192,7 +188,7 @@ textarea{
 }
 
 .Footer{
-  position: relative;
+  position: absolute;
   right: 0;
   bottom: 0;
   left: 0;

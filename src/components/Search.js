@@ -76,9 +76,12 @@ var Search = React.createClass({
               </div>
             </form>
 
-          
           <br/>
         
+        {this.state.data ?
+          <PokemonStats info={this.state.data}/> :
+          null
+        }
          
          
 

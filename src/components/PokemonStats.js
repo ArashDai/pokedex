@@ -14,10 +14,11 @@ var PokemonStats = React.createClass({
         
         <div id='PokeInfo'>
           <div className='col-xs-12 col-sm-6'>
-              <h1>Pokemon Name</h1>
-              <p>#</p>
+              <h1>{this.props.info.name}</h1>
+              <p>{this.props.info.id}</p>
               <p>types</p>
-              <p>height / weight</p>
+              <p>Height: {this.props.info.height}</p>
+              <p>Weight: {this.props.info.weight}</p>
               <p>HP:</p>
               <p>Speed:</p>
               <p>Attack:</p>

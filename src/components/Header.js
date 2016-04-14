@@ -10,9 +10,7 @@ var Header = React.createClass({
 
     return(
           <div className='PageHeader'>
-            
-            <p id='MainHeaderNormal'className='hidden-xs'>POKEDEX</p>
-            <p id='MainHeaderSmall' className='visible-xs col-xs-2'>POKEDEX</p>
+            <p id='MainHeaderNormal'className='text-center'>POKEDEX</p>
           </div> 
     )}
 

@@ -10,8 +10,6 @@ var Routes = (
 
       <IndexRoute component={require('./components/MainPage')} />
 
-       <Route path='/about' component={require('./components/About')}/>
-
     </Route>
 
   );

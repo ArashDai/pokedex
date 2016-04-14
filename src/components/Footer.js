@@ -11,7 +11,7 @@ var Footer = React.createClass({
     return(
       <div className='Footer'>
       
-        sup biiiiiiiiitch
+        such a nice footer
 
       </div>
     )}
