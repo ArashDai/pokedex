@@ -27,6 +27,7 @@ var Search = React.createClass({
 
     $.get(query,function(response){
       var data = {data:response};
+      console.log(data)
       this.setState(data);
     }.bind(this))
 
