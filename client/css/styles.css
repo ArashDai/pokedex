@@ -62,23 +62,6 @@ a:active {
   margin:0em;
 }
 
-.drawerHeader{
-  color:#EEEEEE;
-  margin-top:.3em;
-}
-
-.DrawerNav{
-  padding-top: 4em;
-  color:#EEEEEE;
-  style:none;
-  list-style-type: none;
-  font-size: 18pt;
-}
-
-.navbar-default .navbar-brand{
-  color:#EEEEEE;
-}
-
 .Intro{
   background-image: url('../assets/poke.png');
   background-size:contain;

@@ -25,18 +25,13 @@ var Search = React.createClass({
       var query = 'http://pokeapi.co/api/v2/move/'+this.state.searchValue+'/'
     }
 
-    $.get(query,function(response){
-      var data = {data:response};
-      console.log(data)
-      this.setState(data);
-    }.bind(this))
-
+    $.get(query, response =>{
+      this.setState({data:response});
+    })
+    
   },
 
   storeInput:function(userInput){
-    var data = {
-      searchValue: userInput.target.form[0].value
-    }
 
     this.setState({searchValue: userInput.target.form[0].value}); 
 
@@ -69,7 +64,7 @@ var Search = React.createClass({
               <button onClick={this.queryType} name='searchChoice' type='button' value='attack'> Attack </button>
             </div>
 
-            <form >
+            <form>
               <div className='center-block'>
                 <input onChange={this.storeInput} id='searchbox' name='query' type='textbox' />
 

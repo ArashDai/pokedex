@@ -3,8 +3,8 @@ var EvoChain = require('./EvoChain')
 
 var PokemonStats = React.createClass({
  
-  render:function(){
-    let stats = {
+ getInitialState:function(){
+   return{
       types:[],
       hp:null,
       speed:null,
@@ -12,17 +12,27 @@ var PokemonStats = React.createClass({
       defense:null,
       spAttack:null,
       spDefense:null
-    } 
-    this.props.info.types.forEach(x => { stats.types.push(x.type.name) })
-    stats.types = stats.types.join(', ')
+   }
+ },
+ 
+ componentWillReceiveProps: function(nextProps){
+        // Not called for the initial render
+        // Previous props can be accessed by this.props
+        // Calling setState here does not trigger an an additional re-render
+    this.state.types = [];    
+ },
+
+ 
+ render:function(){
+    this.props.info.types.forEach(x => { this.state.types.push(x.type.name) })
     
     this.props.info.stats.forEach(x => { 
-      if(x.stat.name==='hp'){ stats.hp = x.base_stat  }
-      if(x.stat.name==='speed'){ stats.speed = x.base_stat  }
-      if(x.stat.name==='attack'){ stats.attack = x.base_stat  }
-      if(x.stat.name==='defense'){ stats.defense = x.base_stat  }
-      if(x.stat.name==='special-attack'){ stats.spAttack = x.base_stat  }
-      if(x.stat.name==='special-defense'){ stats.spDefense = x.base_stat  }
+      if(x.stat.name==='hp'){ this.state.hp = x.base_stat  }
+      if(x.stat.name==='speed'){ this.state.speed = x.base_stat  }
+      if(x.stat.name==='attack'){ this.state.attack = x.base_stat  }
+      if(x.stat.name==='defense'){ this.state.defense = x.base_stat  }
+      if(x.stat.name==='special-attack'){ this.state.spAttack = x.base_stat  }
+      if(x.stat.name==='special-defense'){ this.state.spDefense = x.base_stat  }
      })
     
     return(
@@ -36,15 +46,15 @@ var PokemonStats = React.createClass({
           <div className='col-xs-12 col-sm-offset-2 col-sm-2'>
               <h1>{this.props.info.name.toUpperCase()}</h1>
               <p className='text-left'># {this.props.info.id}</p>
-              <p className='text-left'>Types: {stats.types}</p>
+              <p className='text-left'>Types: {this.state.types.join(', ')}</p>
               <p className='text-left'>Height: {this.props.info.height}</p>
               <p className='text-left'>Weight: {this.props.info.weight}</p>
-              <p className='text-left'>HP: {stats.hp}</p>
-              <p className='text-left'>Speed: {stats.speed}</p>
-              <p className='text-left'>Attack: {stats.attack}</p>
-              <p className='text-left'>Defense: {stats.defense}</p>
-              <p className='text-left'>Special Attack: {stats.spAttack}</p>
-              <p className='text-justify'>Special Defense: {stats.spDefense}</p>
+              <p className='text-left'>HP: {this.state.hp}</p>
+              <p className='text-left'>Speed: {this.state.speed}</p>
+              <p className='text-left'>Attack: {this.state.attack}</p>
+              <p className='text-left'>Defense: {this.state.defense}</p>
+              <p className='text-left'>Special Attack: {this.state.spAttack}</p>
+              <p className='text-justify'>Special Defense: {this.state.spDefense}</p>
           </div>
         </div>
         
