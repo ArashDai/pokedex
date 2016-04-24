@@ -15,7 +15,7 @@ var Search = React.createClass({
 
   search:function(userInput){
     let searchValue = userInput.target.form[0].value;
-    
+    //need to clean the user input for names like farfetch'd remove the '
     if(this.state.searchType==='name'){
       var query = 'http://pokeapi.co/api/v2/pokemon/'+searchValue+'/'
     }

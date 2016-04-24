@@ -197,3 +197,7 @@ textarea{
  margin-top:17%; 
  width:12em;
 }
+
+.evoChain{
+  list-style-type: none;
+}
