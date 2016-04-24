@@ -26,13 +26,12 @@ var Search = React.createClass({
       var query = 'http://pokeapi.co/api/v2/move/'+searchValue+'/'
     }
 
-
     $.get(query, response =>{
       this.setState({data:response});
     })
     
   },
-
+  
 
   queryType:function(x){
     if(x.target.value === 'name'){
@@ -76,8 +75,6 @@ var Search = React.createClass({
           null
         }
          
-         
-
       </div>
 
     )

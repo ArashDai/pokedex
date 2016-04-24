@@ -17,7 +17,7 @@ var EvoChain = React.createClass({
                     if(response.chain.evolves_to[i].species.name){ 
                         evolutions.push(response.chain.evolves_to[i].species.name)
                     }
-                    if(response.chain.evolves_to[i].evolves_to[0].species.name){
+                    if(response.chain.evolves_to[i].evolves_to[0]){
                         for( let j = 0; j<response.chain.evolves_to[i].evolves_to.length; j++){
                             evolutions.push(response.chain.evolves_to[i].evolves_to[j].species.name)
                         }  
@@ -45,12 +45,14 @@ var EvoChain = React.createClass({
         response => $.get(response.evolution_chain.url,
             response => {
                 evolutions.push(response.chain.species.name);
-                //console.log('meseeks');
+                console.log('meseeks');
                 for(let i = 0; i<response.chain.evolves_to.length; i++){
+                    
                     if(response.chain.evolves_to[i].species.name){ 
                         evolutions.push(response.chain.evolves_to[i].species.name)
                     }
-                    if(response.chain.evolves_to[i].evolves_to[0].species.name){
+                    
+                    if(response.chain.evolves_to[i].evolves_to[0]){
                         for( let j = 0; j<response.chain.evolves_to[i].evolves_to.length; j++){
                             evolutions.push(response.chain.evolves_to[i].evolves_to[j].species.name)
                         }  
