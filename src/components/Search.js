@@ -8,22 +8,24 @@ var Search = React.createClass({
 
   getInitialState:function(){
     return{
-      searchValue: null,
       searchType: 'name',
       data:null
     }
   },
 
-  search:function(){
+  search:function(userInput){
+    let searchValue = userInput.target.form[0].value;
+    
     if(this.state.searchType==='name'){
-      var query = 'http://pokeapi.co/api/v2/pokemon/'+this.state.searchValue+'/'
+      var query = 'http://pokeapi.co/api/v2/pokemon/'+searchValue+'/'
     }
     if(this.state.searchType==='type'){
-      var query = 'http://pokeapi.co/api/v2/type/'+this.state.searchValue+'/'
+      var query = 'http://pokeapi.co/api/v2/type/'+searchValue+'/'
     }
     if(this.state.searchType==='attack'){
-      var query = 'http://pokeapi.co/api/v2/move/'+this.state.searchValue+'/'
+      var query = 'http://pokeapi.co/api/v2/move/'+searchValue+'/'
     }
+
 
     $.get(query, response =>{
       this.setState({data:response});
@@ -31,11 +33,11 @@ var Search = React.createClass({
     
   },
 
-  storeInput:function(userInput){
+  // storeInput:function(userInput){
 
-    this.setState({searchValue: userInput.target.form[0].value}); 
+  //   this.setState({searchValue: userInput.target.form[0].value}); 
 
-  },
+  // },
 
   queryType:function(x){
     if(x.target.value === 'name'){
@@ -66,7 +68,7 @@ var Search = React.createClass({
 
             <form>
               <div className='center-block'>
-                <input onChange={this.storeInput} id='searchbox' name='query' type='textbox' />
+                <input id='searchbox' name='query' type='textbox' />
 
                 <button id='searchbutton' type="button" onClick={this.search} className="center-block">Search</button>
               </div>

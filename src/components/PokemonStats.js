@@ -1,5 +1,5 @@
 var React = require('react');
-var EvoChain = require('./EvoChain')
+var EvoChain = require('./EvoChain');
 
 var PokemonStats = React.createClass({
  
@@ -11,7 +11,8 @@ var PokemonStats = React.createClass({
       attack:null,
       defense:null,
       spAttack:null,
-      spDefense:null
+      spDefense:null,
+      species:null
    }
  },
  
@@ -34,6 +35,10 @@ var PokemonStats = React.createClass({
       if(x.stat.name==='special-attack'){ this.state.spAttack = x.base_stat  }
       if(x.stat.name==='special-defense'){ this.state.spDefense = x.base_stat  }
      })
+    
+
+    this.state.species = this.props.info.species
+      
     
     return(
      <div className='PokemonStats container-fluid'>
@@ -58,7 +63,7 @@ var PokemonStats = React.createClass({
           </div>
         </div>
         
-        <EvoChain species={this.props.info.species}/>
+        <EvoChain species={this.state.species}/>
 
      </div> 
     )
