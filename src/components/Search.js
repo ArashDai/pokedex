@@ -33,11 +33,6 @@ var Search = React.createClass({
     
   },
 
-  // storeInput:function(userInput){
-
-  //   this.setState({searchValue: userInput.target.form[0].value}); 
-
-  // },
 
   queryType:function(x){
     if(x.target.value === 'name'){
