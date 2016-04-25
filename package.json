@@ -37,6 +37,7 @@
     "watchify": "^3.4.0"
   },
   "scripts": {
+    "start":"node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
