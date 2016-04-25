@@ -53,12 +53,10 @@ var EvoChain = React.createClass({
     
   componentDidMount:function(){
       this.evoGrab(this.props.species.url)
-        console.log(this.state.sprites,'this is sprites in componentDidMount')
   },
     
   componentWillReceiveProps: function(nextProps) {
       this.evoGrab(nextProps.species.url)
-        console.log(this.state.sprites,'this is sprites in componentWillReceiveProps')
   },  
     
   render:function(){
@@ -66,7 +64,7 @@ var EvoChain = React.createClass({
     return(
       <div className='container-fluid Card'>
         <h3 className='text-center'>Evolution Chain</h3>
-        <ul className='evoChain' >
+        <ul className='cleanList' >
             { this.state.sprites ?
                 this.state.sprites.map( (listValue,i) => {
                     return <li key={i}><img src={listValue}/> </li>

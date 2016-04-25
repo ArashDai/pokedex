@@ -1,5 +1,7 @@
 var React = require('react');
 var EvoChain = require('./EvoChain');
+var MovesList = require('./MovesList');
+
 
 var PokemonStats = React.createClass({
  
@@ -17,9 +19,6 @@ var PokemonStats = React.createClass({
  },
  
  componentWillReceiveProps: function(nextProps){
-        // Not called for the initial render
-        // Previous props can be accessed by this.props
-        // Calling setState here does not trigger an an additional re-render
     this.state.types = [];    
  },
 
@@ -35,35 +34,35 @@ var PokemonStats = React.createClass({
       if(x.stat.name==='special-attack'){ this.state.spAttack = x.base_stat  }
       if(x.stat.name==='special-defense'){ this.state.spDefense = x.base_stat  }
      })
-    
 
-    this.state.species = this.props.info.species
+    this.state.species = this.props.info.species;
       
+    this.state.moves = this.props.info.moves;
     
     return(
      <div className='PokemonStats container-fluid'>
+        <h1 className='text-center'>{this.props.info.name.toUpperCase()}</h1>
      
         <div id='spriteContainer' className='col-xs-12 col-sm-6'>
           <img src={this.props.info.sprites.front_default} id='sprite'/>
         </div>
         
-        <div id='PokeInfo'>
-          <div className='col-xs-12 col-sm-offset-2 col-sm-2'>
-              <h1>{this.props.info.name.toUpperCase()}</h1>
-              <p className='text-left'># {this.props.info.id}</p>
-              <p className='text-left'>Types: {this.state.types.join(', ')}</p>
-              <p className='text-left'>Height: {this.props.info.height}</p>
-              <p className='text-left'>Weight: {this.props.info.weight}</p>
-              <p className='text-left'>HP: {this.state.hp}</p>
-              <p className='text-left'>Speed: {this.state.speed}</p>
-              <p className='text-left'>Attack: {this.state.attack}</p>
-              <p className='text-left'>Defense: {this.state.defense}</p>
-              <p className='text-left'>Special Attack: {this.state.spAttack}</p>
-              <p className='text-justify'>Special Defense: {this.state.spDefense}</p>
+          <div className='col-xs-12 col-sm-offset-1 col-sm-4 pokeStats'>
+              <p className='text-left'>Pokemon # <span>{this.props.info.id}</span></p>
+              <p className='text-left'>Types: <span>{this.state.types.join(', ')}</span></p>
+              <p className='text-left'>Height: <span>{this.props.info.height}</span></p>
+              <p className='text-left'>Weight: <span>{this.props.info.weight}</span></p>
+              <p className='text-left'>HP: <span>{this.state.hp}</span></p>
+              <p className='text-left'>Speed: <span>{this.state.speed}</span></p>
+              <p className='text-left'>Attack: <span>{this.state.attack}</span></p>
+              <p className='text-left'>Defense: <span>{this.state.defense}</span></p>
+              <p className='text-left'>Special Attack: <span>{this.state.spAttack}</span></p>
+              <p className='text-left'>Special Defense: <span>{this.state.spDefense}</span></p>
           </div>
-        </div>
+
         
         <EvoChain species={this.state.species}/>
+        <MovesList moves={this.state.moves} />
 
      </div> 
     )

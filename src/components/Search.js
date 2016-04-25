@@ -27,6 +27,7 @@ var Search = React.createClass({
     }
 
     $.get(query, response =>{
+      console.log(response);
       this.setState({data:response});
     })
     
@@ -54,11 +55,11 @@ var Search = React.createClass({
         <a name='portfolioDom'></a>
          <h2 className='text-center col-xs-12'>Search</h2>
 
-            <div id='searchbuttons'>
+         {  /* <div id='searchbuttons'>
               <button onClick={this.queryType} name='searchChoice' type='button' value='name'> Name </button>
               <button onClick={this.queryType} name='searchChoice' type='button' value='type'> Type </button>
               <button onClick={this.queryType} name='searchChoice' type='button' value='attack'> Attack </button>
-            </div>
+            </div> */}
 
             <form>
               <div className='center-block'>

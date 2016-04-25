@@ -198,6 +198,14 @@ textarea{
  width:12em;
 }
 
-.evoChain{
+.cleanList{
   list-style-type: none;
+}
+
+.cleanList li{
+  display: inline;
+}
+
+.pokeStats p{
+  font-weight: bold;
 }
